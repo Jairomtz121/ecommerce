@@ -1,25 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './common/header/Header';
+import { BrowserRouter, Route, Routes} from "react-router-dom"
+import Pages from './pages/Pages';
+import Data from './components/flashDeals/Data';
+import { useState } from 'react';
+import Cart from './common/cart/Cart';
+export default App
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  //paso1: obtener datos de la base de datos
+  const { productItems} = Data;
 
-export default App;
+  const [cartItem, setCardItem] = useState([])
+
+  const addToCart = (product) =>{
+    const productExit = cartItem.find((item) => item.id === product.id)
+
+    if(productExit){
+      setCardItem(cartItem.map((item) => 
+      (item.id === product.id? {...productExit, qty: productExit.qty + 1} : item)))
+    }else {
+      setCardItem([...cartItem, { ...product, qty: 1}])
+    }
+  }
+  const decreaseQty = (product) => {
+    const productExit = cartItem.find((item) => item.id === product.id)
+    if(productExit.qty === 1) {
+      setCardItem(cartItem.filter((item) => item.id !== product.id))
+  }else{
+    setCardItem(cartItem.map((item) => (item.id === product.id ? {...productExit, qty: productExit.qty-1}:item)))
+  }
+}
+  return (
+    <>
+      <BrowserRouter>
+        <Header cartItem={cartItem}/>
+          <Routes>
+            <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} />} />
+            <Route path='/Cart' element={<Cart cartItem={cartItem} addToCart={addToCart} decreaseQty ={decreaseQty}/>} />
+          </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
