@@ -5,6 +5,7 @@ import Pages from './pages/Pages';
 import Data from './components/flashDeals/Data';
 import { useState } from 'react';
 import Cart from './common/cart/Cart';
+import Main from './components/Home/Main';
 export default App
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} />} />
             <Route path='/Cart' element={<Cart cartItem={cartItem} addToCart={addToCart} decreaseQty ={decreaseQty}/>} />
+            <Route path='/Admin' element={<Main/>} />
           </Routes>
       </BrowserRouter>
     </>
