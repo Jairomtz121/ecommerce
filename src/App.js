@@ -5,7 +5,8 @@ import Pages from './pages/Pages';
 import Data from './components/flashDeals/Data';
 import { useState } from 'react';
 import Cart from './common/cart/Cart';
-export default App
+import Footer from './common/footer/Footer';
+
 
 function App() {
   //paso1: obtener datos de la base de datos
@@ -39,7 +40,9 @@ function App() {
             <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} />} />
             <Route path='/Cart' element={<Cart cartItem={cartItem} addToCart={addToCart} decreaseQty ={decreaseQty}/>} />
           </Routes>
+          <Footer />
       </BrowserRouter>
     </>
   )
 }
+export default App

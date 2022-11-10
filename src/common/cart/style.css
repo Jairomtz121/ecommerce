@@ -27,16 +27,16 @@
     object-fit: contain;
 }
 .cart-items .cart-details h3 {
-    font-size: 15px;
+    font-size: 18px;
     margin-top: -165px;
-    margin-right: 2.5cm;
+    margin-right: 3cm;
     text-align: center;   
 }
 .cart-items .cart-details h4 {
     font-size: 15px;
     font-weight: 400px;
     margin-top: 25px;
-    margin-left: 10%;
+    margin-left: 20%;
     color: grey;
     text-align: center;     
 }
@@ -49,22 +49,22 @@
     padding: 10px 10px 10px 10px ;
 }
 .removeCart {
-    background: none;
-    font-size: 25px;
+    background: #f6f9fc;
+    font-size: 20px;
     text-align: right;
-    margin-right: 10px;
-    
+    margin-right: 137px;
+    margin-top: -60px;
+    margin-left: 45px;    
 }
 .cartControl {
-    margin-top: 6px;
+    margin-top: 80px;
 }
 .cartControl button {
     width:  35px;
     height: 35px;
-    margin: 5px;
+    margin: 0px;
     border-radius: 5px;
-    font-size: 15px;
-    
+    font-size: 15px;    
 }
 .cart-items-function {
     margin-left: 90%;

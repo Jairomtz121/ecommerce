@@ -75,7 +75,7 @@ input, button {
   color: #fff;
   margin: 10px;
 }
-/*---------category----------*/
+/*----------------------category----------------------*/
 .contentWidth {
   width: 77%;
 }
@@ -86,7 +86,7 @@ input, button {
   height: 510px;
   padding: 10px 0;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: -15px;
 }
 .category img {
   width: 30px;
@@ -106,7 +106,7 @@ input, button {
   background-color: #ffe1e6;
   cursor: pointer;
 }
-/*---------category----------*/
+/*----------------------category----------------------*/
 .btn-primary {
   background-color: #00158f;
   padding: 13px 40px;
@@ -203,7 +203,7 @@ input, button {
   top: 40%;
   width: 50px;
   height: 50px;
-  line-height: 60px;
+  line-height: 55px;
   background: #0f3460;
   border-radius: 50%;
   transition: 0.5s;

@@ -50,7 +50,7 @@ const FlashCard = ({productItems, addToCart}) => {
                     <img src={productItems.cover} alt="" />
                     <div className="product-like">
                         <label>0</label> <br />
-                        <i className='fa fa-heart' onClick={increment}></i>
+                        <i className='fa-regular fa-heart' onClick={increment}></i>
                     </div>
                 </div>
                 <div className="product-details">
