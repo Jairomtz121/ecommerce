@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './common/footer/Footer.jsx'
 import Header from './common/header/Header';
 import { BrowserRouter, Route, Routes} from "react-router-dom"
 import Pages from './pages/Pages';
@@ -6,6 +7,7 @@ import Data from './components/flashDeals/Data';
 import { useState } from 'react';
 import Cart from './common/cart/Cart';
 import Main from './components/Home/Main';
+
 
 function App() {
   //paso1: obtener datos de la base de datos
@@ -40,6 +42,7 @@ function App() {
             <Route path='/Cart' element={<Cart cartItem={cartItem} addToCart={addToCart} decreaseQty ={decreaseQty}/>} />
             <Route path='/Admin' element={<Main/>} />
           </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )

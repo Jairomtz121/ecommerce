@@ -13,3 +13,8 @@ footer {
     padding: 15px 20px;
     border-radius: 20px;
   }
+  footer .container {
+      margin: 1rem;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 20%;  
+  }
