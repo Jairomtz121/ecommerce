@@ -18,11 +18,15 @@ const Footer = () => {
                         <div className='icon d_flex'>
                             <div className='img d_flex'>
                                 <i class='fa-brands fa-google-play'></i>
-                                <span>Google Play</span>
+                                    <li>
+                                        <a href="https://play.google.com/store/games">Google Play</a>
+                                    </li>                                    
                             </div>
                             <div className='img d_flex'>
                                 <i class='fa-brands fa-app-store-ios'></i>
-                                <span>App Store</span>
+                                    <li>
+                                        <a href="https://apps.apple.com/es/app/apple-store/id375380948">Google Play</a>
+                                    </li> 
                             </div>
                         </div>
                     </div>
